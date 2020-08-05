@@ -29,7 +29,7 @@ public class AlunoExec {
 				case 1:
 					System.out.println("==== CADASTRANDO ALUNO ====");
 					try {
-						AlunoExec.conectar().salvar(AlunoExec.receberDadosCadastro());
+						AlunoExec.conectar().salvar(AlunoExec.receberDados());
 						//alunosJdbcDao.salvar(aluno);
 					} catch (SQLException e) {
 						System.out.println("Não cadastrou.");
@@ -88,17 +88,6 @@ public class AlunoExec {
 		System.out.println("5 - LISTAR ALUNOS");
 		System.out.println("6 - SAIR");
 		System.out.println("Digite a opção desejada:");	
-	}
-	
-	public static Aluno receberDadosCadastro() {
-		Aluno aluno = new Aluno();	
-		System.out.println("Digite o nome do aluno: ");
-		aluno.setNome(entrada.nextLine());
-		System.out.println("Digite o endereço do aluno: ");
-		aluno.setEndereco(entrada.nextLine());
-		System.out.println("Digite o bairro do aluno: ");
-		aluno.setBairro(entrada.nextLine());
-		return aluno;
 	}
 	
 	public static Aluno receberDados() {
